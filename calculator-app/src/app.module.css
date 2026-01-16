@@ -1,15 +1,75 @@
 .calculator {
 	display: flex;
 	flex-direction: column;
-	max-width: 600px;
-	width: 100%;
+	max-width: 320px;
+	width: fit-content;
 	background: #242424;
-	border: 1px solid #FFF;
+	border: 1px solid white;
+	border-radius: 20px;
 	margin: 0 auto;
 }
 
 .display {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
 	width: 100%;
-	height: 60px;
-	background: #FFF;
+	height: 70px;
+	padding: 10px 15px;
+	font-size: 40px;
+	font-weight: 700;
+	text-align: right;
+	border-bottom: 1px solid white;
+	overflow: hidden;
+}
+
+.keyboard {
+	display: flex;
+	gap: 10px;
+	padding: 15px;
+}
+
+.numbers {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 10px;
+}
+
+.button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 65px;
+	height: 65px;
+	font-size: 30px;
+	font-weight: 400;
+	color: white;
+	border: 1px solid white;
+	border-radius: 20px;
+	transition: 0.2s ease-in;
+	cursor: pointer;
+}
+
+.button:hover {
+	opacity: 0.8;
+}
+
+.numbers .button {
+	background: #343434;
+}
+
+.numbers .button:first-child {
+	grid-column: span 3;
+	order: 2;
+	width: auto;
+}
+
+.operations {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.operations .button {
+	background: #FF9F0A;
 }
